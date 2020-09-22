@@ -1,0 +1,229 @@
+html {
+  box-sizing: border-box; /*total width= padding size and the border*/
+}
+
+*,*::before, *::after{ /* inserts something before and after the content of each selected element*/
+   box-sizing: inherit;/*Inherits this property from its parent element.*/
+}
+
+body{
+  margin: 0;
+}
+
+/* Responsive Images */
+
+embed,
+iframe,
+img,
+object,
+video {
+  max-width: 100%;
+  /*f the content is larger than the maximum
+   width, it will automatically change the height of the element.*/
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul,
+ol,
+li,
+p,
+pre,
+blockquote,
+figure,
+hr {
+  margin: 0;
+  padding-right: 0;
+  padding-left: 0;
+}
+
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  display: block;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+/*
+ * Completely resets form items
+ * ----------------------------
+ * Super hard reset that removes all borders
+ * and radiuses of all form items (including
+ * checkboxes and radios)
+ */
+
+input,
+textarea,
+button {
+  border: 0;
+  border-radius: 0;
+  background-color: transparent;
+  font-size: inherit;
+  font-family: inherit;
+  font-weight: inherit;
+  outline: none;
+  appearance: none;
+  text-align: left;
+}
+
+input:hover,
+input:active,
+input:focus,
+textarea:hover,
+textarea:active,
+textarea:focus,
+button:hover,
+button:active,
+button:focus {
+  outline: none;
+  /*active is for links, focus is for inputs*/
+
+}
+
+
+:root{
+  /*The :root selector matches the document's root element.*/
+  font-family: Impact, Charcoal, sans-serif;
+}
+
+html{
+  font-size: 150%;
+  font-weight: 300;
+  line-height: 1.3;
+   /* //space between lines */
+}
+
+body{
+  align-items: center;
+  /* background-image: linear-gradient( #BCE8F0, #30323D);//multi colors */
+  /* background-image:linear-gradient(to top right, #BCE8F0 50%, #30323D 50%); */
+  /* background-color: #30323D; */
+  background-image: url(trees.jpg);
+
+  display:block;
+  height: 50vh;
+  /* //means the height of this element is equal to 100% of the viewport height. */
+  justify-content: center;
+}
+
+header {
+  /* border-bottom: 2px solid  #778899; */
+}
+.header--text1 {
+  text-align: center;
+    color:black;
+  margin-top: 5px;
+  font-family: Impact, Charcoal, sans-serif;
+
+}
+.moo{
+  border: 1px solid black;
+  background-color: #1A1B28;
+  color: white;
+  font-size: 0.5em;
+  justify-content: center;
+  margin-top: 20px;
+}
+.header--text2 {
+  text-align: center;
+  font-size: 0.3em;
+  color: black;
+  font-family: Impact, Charcoal, sans-serif;
+  margin-top: 25px;
+  margin-bottom: 10px;
+}
+
+.container{
+  max-width: 20em;
+  margin-left: auto;
+  margin-right: auto;
+
+}
+ .container > p{
+   /* //https://techbrij.com/css-selector-adjacent-child-sibling */
+  text-align: center;
+}
+
+.calculator{
+  border-radius: 12px;
+  box-shadow: 0 0 40px 0px rgba(0,0,0,0.15);
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 2em;
+  max-width: 16em;
+  background-color: #1A1B28;
+
+   overflow: hidden; /*if content is bigger than the container */
+}
+
+.calculator-display{
+  background-color: #1A1B28;
+  color: #fff;
+  font-size: 1.714285714em;
+  padding:0.5em 0.75em;
+  text-align: right;
+  /* height: 70px; */
+}
+
+
+.calculator-keys{
+  background-color: #1A1B28;
+  display: grid;
+  grid-gap: 10px;
+  padding: 10px;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.calculator-keys > * {
+  background-color: #D7E0F1;
+  padding: 0.5em 1.25em;
+  position: relative;
+  text-align: center;
+  border-radius: 5%;
+  color: black;
+}
+
+.calculator-keys > *:active::before,
+.calculator-keys > .is-depressed::before {
+  background-color: black;
+  bottom: 0;
+  /* box-shadow: 0 0 6px 0 #D7E0F1 inset; */
+  content: "";
+  left: 0;
+  opacity: 0.4;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index:  1;
+}
+
+.key--operator {
+  background-color: #6F90A1;
+  color: white;
+
+}
+
+.key--equal {
+  /* background-image: linear-gradient(to bottom, #fe886a, #ff7033); */
+  background-color: #405765;
+  grid-column: 4;
+  grid-row: 2 /  6;
+  border-radius: 1%;
+  color: white;
+
+  /* grids means the border ,
+  grid column starts from the 4th col border
+  grid row starts from the 2nd  row  border till 6th */
+}
